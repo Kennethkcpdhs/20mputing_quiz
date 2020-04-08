@@ -345,7 +345,7 @@ def leaderboard():
 
     e = sqlite3.connect('data1.db')
     c = e.cursor()
-    instr = c.execute('''SELECT Email, HighestScore, NumAttempts FROM Attempt ORDER BY HighestScore DESC,NumAttempts ASC LIMIT 2''')
+    instr = c.execute('''SELECT Email, HighestScore, NumAttempts FROM Attempt ORDER BY HighestScore DESC,NumAttempts ASC LIMIT 10''')
     winners = instr.fetchall()
     #changing all tuples to a list
     print(winners[0])
