@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}MCQ CP A'level{% endblock %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block content %}
+<br>
+<h1><span class="badge badge-secondary">Register as a New User</span></h1>
+<br>
+<form action="/register" method="post">
+  <div class="form-group">
+    <div class="alert alert-primary" role="alert">
+      Add your Email Address
+    </div>
+    <label for="exampleInputEmail1">Click on the button and we will send the code to your email</label>
+    <input type="email" name="email" placeholder="Enter email" class="form-control">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <br>
+    <button type="submit" name="half_input"class="btn btn-primary">Submit Email Address for Unique Code</button>
+  </div>
+</form>
+
+<a class="btn btn-outline-success" href="/" role="button"><strong>I remember my password now. Bring me back to the login page!</strong></a>
+<br>
+
+
+{% endblock %}

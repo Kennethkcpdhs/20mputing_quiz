@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}MCQ CP A'level{% endblock %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block content %}
+<br>
+<h1><span class="badge badge-secondary">Login Page</span></h1>
+<br>
+<a class="btn btn-outline-danger btn-lg btn-block" href="/register" role="button">Register as a new user here!</a>
+<br>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <div class="alert alert-warning" role="alert">
+      Ensure that you have received your code through your email if you had registered earlier.
+    </div>
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" name="email" placeholder="Enter email" class="form-control">
+
+    <!-- Password input -->
+    <label for="pwd">Password</label>
+    <input type="password" class="form-control" name="pwd" placeholder="Password">
+    <br>
+    <button type="submit" name="full_input" class="btn btn-primary">Let's Login</button>
+  </div>
+  <br>
+</form>
+{% endblock %}

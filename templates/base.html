@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="content">
+      <!--header-->
+      <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>The A'Level Computing Quiz</h1>
+        <hr class="my-4">
+        <p>The evolving A'level Computing quiz</p>
+        <a class="btn btn-primary btn-lg" href="https://docs.google.com/document/d/1Ow4_0-5qPdOZwy0ZPZICSqOI6biNEmCnTorzWLXYzoQ/edit?usp=sharing" role="button">View the Computing Book Here!</a>
+      </div>
+      {% block content %}
+      {% endblock %}
+    <br>
+    <!--footer-->
+    {% block footer %}
+    <footer class="container-fluid text-center">
+      Open Source Information. 2020 DHS.
+    </footer>
+    {% endblock %}
+</body>
+</html>

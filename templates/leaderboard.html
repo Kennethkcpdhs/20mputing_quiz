@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}MCQ CP A'level{% endblock %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+
+<br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Score</th>
+      <th scope="col">NumAttempts</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in range(numppl) %}
+    <tr>
+      <th scope="row">{{ i }}</th>
+      <td>{{ winners[i][0] }}</td>
+      <td>{{ winners[i][1] }}</td>
+      <td>{{ winners[i][2] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<br>
+<center><a class="btn btn-outline-success" href="/index" role="button"><strong>Back to Home page</strong></a></center>
+{% endblock %}

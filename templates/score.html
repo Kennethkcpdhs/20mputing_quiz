@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Your Score!{% endblock %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+<div class="card mx-auto">
+  <h5 class="card-header">Here is your score, {{ name }}</h5>
+  <div class="card-body">
+    <h5 class="card-title">Playing as {{ curr_user }}</h5>
+    <h3 class="card-text">You scored a total of {{ curr_score }} points!</h3>
+  </div><br>
+  <div class="card-body">
+    {% for item in wrong %}
+    <h5 class="card-title"><strong>{{ item[0] }}</strong></h5>
+    <div class="alert alert-danger" role="alert">
+      <p class="card-text">You chose <strong>{{ item[1] }}</strong></p>
+    </div>
+    <div class="alert alert-success" role="alert">
+      <p class="card-text">Instead, the answer is <strong><i>{{ item[2] }}</i></strong></p>
+    </div><br>
+    {% endfor %}
+  </div>
+<a href="/index" class="btn btn-primary">Go back to homepage</a>
+</div>
+{% endblock %}

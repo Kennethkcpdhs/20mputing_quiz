@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Cyber{% endblock %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+<form action="/score" method="post">
+  <div class="card">
+  <h5 class="card-header">Featured</h5>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+
+
+      <label for="exampleInputEmail1">Qn 1 </label>
+      <br>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+      </label>
+      </div>
+      <br>
+
+
+      <label for="exampleInputEmail1">Qn 1 </label>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+      </label>
+      </div>
+      <br>
+
+      <label for="exampleInputEmail1">Qn 1 </label>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary" active>
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+      </label>
+      </div>
+      <br>
+
+      <label for="exampleInputEmail1">Qn 1 </label>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary active">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+      </label>
+      <label class="btn btn-secondary">
+        <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+      </label>
+      </div>
+      </div>
+    <!-- Submit -->
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+.jumbotron{
+    background-color:#62e2b3;
+}
+
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #a49a9a;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #25bba5;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 13px;
+}
+
+
+h1{
+  font-family: sans-serif;
+}

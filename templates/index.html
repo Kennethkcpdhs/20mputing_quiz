@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}MCQ CP A'level{% endblock %}
+{% block head %}
+    {{ super() }}
+
+{% endblock %}
+{% block content %}
+<div class="card-deck">
+  <div class="card">
+    <div class="card-body">
+      <style>
+        .container {
+          position: relative;
+          width: 100%;
+        }
+
+        .image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: .8s ease;
+          background-color: #394f74;
+
+        }
+        .overlay2{
+          background-color: #3a7439;
+        }
+        .overlay3{
+          background-color: #d78211;
+        }
+
+        .container:hover .overlay {
+          width: 82%;
+          opacity: 1;
+        }
+
+        .container:hover .overlay2 {
+          width: 82%;
+          opacity: 1;
+        }
+
+        .container:hover .overlay3 {
+          width: 100%;
+          height: 70%;
+          opacity: 1;
+        }
+
+        .texts{
+          color: #394f74;
+          width: 70%;
+          height: 70%;
+          font-size: 28px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: left;
+        }
+
+      </style>
+      <div class="container">
+        <img src="https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/news/2018/10/ALM%20Intelligence%20names%20EY%20a%20leader%20in%20cybersecurity%20consulting.jpg" alt="cyber" class="image">
+        <div class="overlay">
+          <div class="texts">[Coming Soon] Learn the basics of the Cyber World. <br> Topics include networking, encryption and more
+            <br><a href="#" class="btn btn-primary stretched-link">Let me start!</a>
+          </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+  <div class="card">
+      <div class="card-body">
+        <div class="container">
+          <img src="https://miro.medium.com/max/800/1*FLlGUOvCLhzj9MHDQPuZjw.png" alt="flaskjinja" class="image">
+          <div class="overlay overlay2">
+            <div class="texts">Algorithms and Programs<br>Databases, Sorting and more
+              <br><a href="/algo" class="btn btn-primary stretched-link">Let me start!</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!--Leaderboard -->
+<div class="card-deck mx-auto w-50 p-1 ">
+  <div class="card bg-dark text-white">
+      <div class="card-body">
+        <div class="container">
+          <img src="https://user-images.githubusercontent.com/47784720/78649239-c07a9f80-78ef-11ea-8c90-d67350725d20.jpg" alt="medals" class="image img-responsive">
+          <div class="overlay overlay3">
+            <div class="texts">Leaderboard<br>
+              <a href="/leaderboard" class="btn btn-primary stretched-link">Let's view</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
