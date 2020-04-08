@@ -1,0 +1,39 @@
+NAME,QUESTION,ANSWER,DISTRACTOR
+LIM AH SENG,HTML controls the ___ layer of a website / app.,content / structure,presentation
+LIM AH SENG,HTML5 should have the doctype ___.,html,html5
+LIM AH SENG,The meta charset tag is inside the ___ section of a HTML page.,head,body
+LIM AH SENG,The ___ tag identifies the HTML page and is one of the most important factors in search engine rankings.,title,head
+LIM AH SENG,HTML is case sensitive.,true,false
+LIM AH SENG,Use an ___ list to outline the sequence of a process.,ordered ol,unordered ul
+LIM AH SENG,Use an ___ list for a generic laundry list.,unordered ul,ordered ol
+LIM AH SENG,The input tag must be within the ___ tag.,form,submit
+LIM AH SENG,"To pass data to the server, the input tag must have a ___ attribute.",name,variable
+LIM AH SENG,The text of a submit button is determined by the value of the ___ attribute.,value,name
+AMBER ROSE PILLAY,,,
+ANIKA TAN YAN YUE,Do all HTML tags have an end tag?,Nope,
+CHLOE CADENCE TAY RUIYI,,,
+EMILY ONG HUI QI,What is the use of meta attributes in HTML?,Data defined by user that can be indexed by search engines or information that defines viewport scale etc.,Description of webpage
+MICHELLE PHAN SHEN MEI,,,
+TAY JIA YING,What do attributes do?,They provide additional information about HTML elements,They make the web page look pretty
+YE GAOFAN,HTML links are defined with the ___ tag.,<a>,<l>
+YE GAOFAN,"In HTML, link destinations are specified with the ___ attribute.",href,ref
+YE GAOFAN,How do you insert a line break in HTML?,<br>,<break>
+YE GAOFAN,<br> has no end tag.,TRUE,FALSE
+YE GAOFAN,All html tags have end tags.,FALSE,TRUE
+YEO HANYIN,,,
+ALEXANDER LISWANDY,How to you write comments in HTML?,<!-- comment -->,// comment
+ALEXANDER LISWANDY,What is the importance of the title tag?,It is used to display on tabs bar and is an important factor for search engines,It is just used to display on tabs bar
+ALEXANDER LISWANDY,HTML code does not need to be indented.,True ,False 
+CHONG TZE ZHAO,<span> and <div> tags are exactly the same,"False, default display mode of <span> is inline while default display mode of <div> is a block",True 
+CHONG TZE ZHAO,What is the difference between an ordered list (ol) and an unordered list (ul)?,"Ordered lists assign a marker to each element in list, can be either numerical or alphabetical",ordered lists sort the list for you
+"CHOW KIAN FONG, ACE",To add images using html we use ___,"<img src = "" "" >","<img link = "" "" >"
+"CHUA WEE CHYE, RYAN",,,
+FANG TIANCHI,"what is the use of ""doctype""?",It tells the processor that the file is a html file,
+GRANT TAY YU CONG,how to use css in html directly?,<style> tags,<css> tags
+GU BOYUAN,"To make dynamic webpages, we can use Jinja, as it is a _____________.",web templating engine,web framework
+JOSHUA KWAN,,,
+LIANG KUAN HSIEN,Which heading displays larger text by default? H1 or H2?,H1,H2
+NG CHOON HAO,,,
+NICHOLAS ONG ZHENG KAI,,,
+PUA SUAN PIN,,,
+ZHANG YUXIANG,,,

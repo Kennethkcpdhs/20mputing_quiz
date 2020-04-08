@@ -2,7 +2,7 @@ from flask import *
 from flask_mail import Mail, Message
 import sqlite3
 import os
-import bcrypt
+import hashlib
 
 app = Flask(__name__)
 
@@ -60,14 +60,14 @@ def login():
                 </html>
             ''')
 
-        check = c.execute('''SELECT UserID,Email From User WHERE UserID=? AND Email=?''',(pwd,email_link,))
+        check = c.execute('''SELECT UserID,Password,Email From User WHERE Password=? AND Email=?''',(pwd,email_link,))
         check = check.fetchall()
         e.commit()
         c.close()
         print(check)
         if check != []: #user enters correct password
             session['curr_user_email'] = email_link
-            session['pwd'] = pwd
+            session['pwd'] = str(check[0][0])
             return render_template_string("""
                 <html>
                     <head>
@@ -124,22 +124,29 @@ def register():
         print("Email",email_link)
 
         #check for existing user
-        instr = c.execute('''SELECT UserID From User WHERE Email=?''',(email_link,))
+        instr = c.execute('''SELECT Password From User WHERE Email=?''',(email_link,))
         codedata = instr.fetchall()
-        print(codedata)
-
-        if codedata == []: #if new user registering
+        print("yes",codedata)
+        if codedata == [] or not codedata[0]: #if new user registering
             c.execute('''INSERT INTO User(Email) VALUES(?)''',(email_link,))
-            instr = c.execute('''SELECT UserID,Email From User WHERE Email=?''',(email_link,))
-            codedata = instr.fetchall()
+            #getting id
+            tem = c.execute('''SELECT UserID,Email From User WHERE Email=?''',(email_link,))
+            instr = tem.fetchall()
+            print("oof",instr)
+            userpwd = str(instr[0][0])
+            userpwd = str(hashlib.sha256(userpwd.encode()).hexdigest())
+            c.execute('''Update User SET Password=? WHERE Email=?''',(userpwd,email_link,))
             e.commit()
+        else:
+            userpwd = codedata[0][0]
+
 
         #Sending of emails to the selected user accounts
         msg = Message('MCQ App Login',
                     sender='dante.mossfield@gmail.com')
         msg.recipients=[email_link]
-        print("data",codedata[0][0])
-        msg.body = 'Here is your password, \n'+str(codedata[0][0])+'\nThe password is deliberately made insecure, take care of it.'
+
+        msg.body = 'Here is your password, \n'+str(userpwd)+'\nThe password is deliberately made insecure, take care of it.'
         mail.send(msg)
         return render_template_string('''
             <html>
